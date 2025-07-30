@@ -27,28 +27,31 @@
     <div id="app">
       <!-- Contador con clases ya implementadas -->
       <div class="contador" :class="contador % 2 === 0 ? 'azul' : 'rojo'">
-        <!-- TODO: Agregar aquí  contador con valor dinamico para mostrar el valor -->
+        <!-- TODO: Mostrar el valor dinámico del contador aquí -->
       </div>
 
-      <!-- TODO: Agregar  a las botones  las directivas @click para llamar a los métodos correspondientes -->
+      <!-- TODO: Agregar las directivas @click a los botones -->
       <button>Incrementar</button>
       <button>Decrementar</button>
       <button>Reiniciar</button>
     </div>
 
-    <script>
-      const { createApp } = Vue;
+    <script type="module">
+      const { createApp, ref } = Vue;
 
       createApp({
-        data() {
+        setup() {
+          // TODO: Crear una variable reactiva "contador" inicializada en 0
+
+          // TODO: Implementar la función "incrementar" para aumentar el contador
+
+          // TODO: Implementar la función "decrementar" para disminuir el contador, sin bajar de 0
+
+          // TODO: Implementar la función "reiniciar" para poner el contador en 0
+
           return {
-            contador: 0, // valor inicial
+            // TODO: retornar contador e implementar las funciones para usarlas en la plantilla
           };
-        },
-        methods: {
-          // TODO: Implementar el método incrementar(), que aumente el contador en 1
-          // TODO: Implementar el método decrementar(), que disminuya el contador en 1, pero sin bajar de 0
-          // TODO: Implementar el método reiniciar(), que ponga el contador nuevamente en 0
         },
       }).mount("#app");
     </script>
