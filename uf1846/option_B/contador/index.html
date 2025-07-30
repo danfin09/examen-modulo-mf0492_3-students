@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador Vue - Starter</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .contador {
+        font-size: 5rem;
+        margin: 20px;
+      }
+      .azul {
+        color: blue;
+      }
+      .rojo {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Contador con clases ya implementadas -->
+      <div class="contador" :class="contador % 2 === 0 ? 'azul' : 'rojo'">
+        <!-- TODO: Agregar aquí  contador con valor dinamico para mostrar el valor -->
+      </div>
+
+      <!-- TODO: Agregar  a las botones  las directivas @click para llamar a los métodos correspondientes -->
+      <button>Incrementar</button>
+      <button>Decrementar</button>
+      <button>Reiniciar</button>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            contador: 0, // valor inicial
+          };
+        },
+        methods: {
+          // TODO: Implementar el método incrementar(), que aumente el contador en 1
+          // TODO: Implementar el método decrementar(), que disminuya el contador en 1, pero sin bajar de 0
+          // TODO: Implementar el método reiniciar(), que ponga el contador nuevamente en 0
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

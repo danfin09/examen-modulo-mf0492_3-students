@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabs - Starter</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- TODO: Agregar los eventos @click para cambiar la pestaña -->
+      <button>Inicio</button>
+      <button>Perfil</button>
+      <button>Configuración</button>
+
+      <!-- TODO: Mostrar el contenido de las pestañas con v-if -->
+      <div>
+        <!-- TODO: Monstar el contenido de la pestaña "home" -->
+        <h2>Bienvenido a la página de inicio</h2>
+      </div>
+      <div>
+        <!-- TODO: Monstar el contenido de la pestaña "perfil" -->
+        <h2>Este es tu perfil</h2>
+      </div>
+      <div>
+        <!-- TODO: Mostrar el contenido de la pestaña "configuracion" -->
+        <h2>Ajustes de usuario</h2>
+      </div>
+    </div>
+
+    <script type="module">
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          // TODO: Crear la variable reactiva "tab" inicializada con "home"
+
+          return {
+            // TODO: retornar la variable "tab"
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
