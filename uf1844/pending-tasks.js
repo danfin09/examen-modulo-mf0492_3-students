@@ -1,5 +1,5 @@
 
-function filterPendingTaks(tasks) {
+function filterPendingTasks(tasks) {
 
 }
 
@@ -10,7 +10,7 @@ const tasks = [
   { task: "Clean the house", completed: true },
 ];
 
-const result = filterPendingTaks(tasks);
+const result = filterPendingTasks(tasks);
 console.log(result);
 /**
  * // Pending tasks
