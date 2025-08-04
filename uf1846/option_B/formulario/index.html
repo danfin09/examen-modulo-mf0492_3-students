@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario - Starter</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- TODO: Agregar el evento @submit.prevent para llamar al método mostrar -->
+      <form>
+        <!-- TODO: Enlazar este input a la variable nombre usando v-model -->
+        <input placeholder="Tu nombre" />
+
+        <!-- TODO: Enlazar este input a la variable edad usando v-model.number -->
+        <input type="number" placeholder="Tu edad" />
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <!-- TODO: Mostrar el mensaje solo si mostrado es true -->
+      <!-- TODO: Completar el mensaje para mostrar el nombre y la edad -->
+      <p>Hola ..., tienes ... años.</p>
+    </div>
+
+    <script type="module">
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          // Variables reactivas
+          // TODO: variable para guardar el nombre
+          // TODO: variable para guardar la edad
+          // TODO: variable para mostrar el mensaje
+
+          // TODO: Crear el método mostrar() que ponga mostrado en true solo si hay nombre y edad
+
+          return {
+            nombre,
+            edad,
+            mostrado,
+            // TODO: retornar el método mostrar aquí
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
