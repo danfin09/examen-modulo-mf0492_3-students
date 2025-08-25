@@ -8,19 +8,19 @@
   <body>
     <div id="app">
       <!-- TODO: Agregar el evento @submit.prevent para llamar al método mostrar -->
-      <form>
+      <form @submit.prevent="mostrar">
         <!-- TODO: Enlazar este input a la variable nombre usando v-model -->
-        <input placeholder="Tu nombre" />
+        <input v-model="nombre" placeholder="Tu nombre" />
 
         <!-- TODO: Enlazar este input a la variable edad usando v-model.number -->
-        <input type="number" placeholder="Tu edad" />
-
+        <input v-model.number="edad" type="number" placeholder="Tu edad" />
         <button type="submit">Enviar</button>
       </form>
 
       <!-- TODO: Mostrar el mensaje solo si mostrado es true -->
+      <p v-if="mostrado">¡Formulario enviado!</p>
       <!-- TODO: Completar el mensaje para mostrar el nombre y la edad -->
-      <p>Hola ..., tienes ... años.</p>
+      <p v-if="mostrado">Hola {{ nombre }}, tienes {{ edad }} años.</p>
     </div>
 
     <script type="module">
@@ -29,17 +29,25 @@
       createApp({
         setup() {
           // Variables reactivas
+          const nombre = ref("");
           // TODO: variable para guardar el nombre
+          const edad = ref(0);
           // TODO: variable para guardar la edad
+          const mostrado = ref(false);
           // TODO: variable para mostrar el mensaje
 
           // TODO: Crear el método mostrar() que ponga mostrado en true solo si hay nombre y edad
+          const mostrar = () => {
+            if (nombre.value && edad.value) {
+              mostrado.value = true;
+            }
+          };
 
           return {
             nombre,
             edad,
             mostrado,
-            // TODO: retornar el método mostrar aquí
+            mostrar
           };
         },
       }).mount("#app");

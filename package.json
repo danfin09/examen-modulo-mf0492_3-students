@@ -1,0 +1,27 @@
+{
+  "name": "examen-modulo-mf0492_3-students",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danfin09/examen-modulo-mf0492_3-students.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danfin09/examen-modulo-mf0492_3-students/issues"
+  },
+  "homepage": "https://github.com/danfin09/examen-modulo-mf0492_3-students#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.34.0",
+    "nodemon": "^3.1.10"
+  }
+}
